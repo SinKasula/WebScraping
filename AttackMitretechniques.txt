@@ -1,0 +1,935 @@
+T1156-.bash_profile and .bashrc
+
+T1134-Access Token Manipulation
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationAPT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationAPT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalation.[6];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationBankshot - Bankshot grabs a user token using WTSQueryUserToken and then creates a process by impersonating a logged-on user.[7];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationCobalt Strike - Cobalt Strike can steal access tokens from exiting processes and make tokens from known credentials.[8];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationDuqu - Duqu examines running system processes for tokens that have specific system privileges. If it finds one, it will copy the token and store it for later use. Eventually it will start new processes with the stored token attached. It can also steal tokens to acquire administrative privileges.[9];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationFinFisher - FinFisher uses token manipulation with NtFilterToken as part of UAC bypass.[10][11];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationHydraq - Hydraq creates a backdoor through which remote attackers can adjust token privileges.[12];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationLazarus Group - Lazarus Group keylogger KiloAlfa obtains user tokens from interactive sessions to execute itself with API call CreateProcessAsUserA under that user's context.[13][14];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationPowerSploit - PowerSploit's Invoke-TokenManipulation Exfiltration module can be used to locate and impersonate user logon tokens.[15][16];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationPupy - Pupy can obtain a list of SIDs and provide the option for selecting process tokens to impersonate.[17];
+APT28 - APT28 has used CVE-2015-1701 to access the SYSTEM token and copy it into the current process as part of privilege escalationSslMM - SslMM contains a feature to manipulate process privileges and tokens.[18];
+
+T1015-Accessibility Features
+APT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethcAPT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethcAPT29 - APT29 used sticky-keys to obtain unauthenticated, privileged console access.[4][5];
+APT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethcAPT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethc.exe for persistence.[6];
+APT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethcAxiom - Axiom actors have been known to use the Sticky Keys replacement within RDP sessions to obtain persistence.[7];
+APT3 - APT3 replaces the Sticky Keys binary C:\Windows\System32\sethcDeep Panda - Deep Panda has used the sticky-keys technique to bypass the RDP login screen on remote systems during intrusions.[8];
+
+T1087-Account Discovery
+Bankshot - Bankshot gathers domain and account names/information through process monitoringBankshot - Bankshot gathers domain and account names/information through process monitoringadmin@338 - admin@338 actors used the following commands following exploitation of a machine with LOWBALL malware to enumerate user accounts: net user >> %temp%\download net user /domain >> %temp%\download[1];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringAPT3 - APT3 has used a tool that can obtain info about local and global group users, power users, and administrators.[2];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringBankshot - Bankshot gathers domain and account names/information through process monitoring.[3];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringBRONZE BUTLER - BRONZE BUTLER has used net user /domain to identify account information.[4];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringComnie - Comnie uses the net user command.[5];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringDragonfly 2.0 - Dragonfly 2.0 used batch scripts to enumerate users in the victim environment.[6];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringdsquery - dsquery can be used to gather information on user accounts within a domain.[7];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringDuqu - The discovery modules used with Duqu can collect information on accounts and permissions.[8];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringElise - Elise executes net user after initial communication is made to the remote server.[9];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringFIN6 - FIN6 has used Metasploit’s PsExec NTDSGRAB module to obtain a copy of the victim's Active Directory database.[10];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringGeminiDuke - GeminiDuke collects information on local user accounts from the victim.[11];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringInvisiMole - InvisiMole has a command to list account information on the victim’s machine.[12];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringKazuar - Kazuar gathers information on local groups and members on the victim’s machine.[13];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringKe3chang - Ke3chang performs account discovery using commands such as net localgroup administrators and net group "REDACTED" /domain on specific permissions groups.[14];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringKwampirs - Kwampirs collects a list of accounts with the command net users.[15];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringmenuPass - menuPass has used the Microsoft administration tool csvde.exe to export Active Directory data.[16];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringMis-Type - Mis-Type may create a file containing the results of the command cmd.exe /c net user {Username}.[17];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringMURKYTOP - has the capability to retrieve information about users on remote hosts.[18];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringNet - Commands under net user can be used in Net to gather information about and manipulate user accounts.[19];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringOilRig - OilRig has run net user, net user /domain, net group "domain admins" /domain, and net group "Exchange Trusted Subsystem" /domain to get account listings on a victim.[20];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringOSInfo - OSInfo enumerates local and domain users[2];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringPoseidon Group - Poseidon Group searches for administrator accounts on both the local victim machine and the network.[21];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringPowerSploit - PowerSploit's Get-ProcessTokenGroup Privesc-PowerUp module can enumerate all SIDs associated with its current token.[22][23];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringPOWERSTATS - POWERSTATS can retrieve usernames from compromised hosts.[24];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringPOWRUNER - POWRUNER may collect user account information by running net user /domain or a series of other commands on a victim.[25];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringPupy - Pupy uses PowerView and Pywerview to perform discovery commands such as net user, net group, net local group, etc.[26];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringRATANKBA - RATANKBA uses the net user command.[27];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringRemsec - Remsec can obtain a list of users.[28];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringS-Type - S-Type runs the command net user on a victim. S-Type also runs tests to determine the privilege level of the compromised user.[17];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringSHOTPUT - SHOTPUT has a command to retrieve information about connected users.[29];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringSykipot - Sykipot may use net group "domain admins" /domain to display accounts in the "domain admins" permissions group and net localgroup "administrators" to list local system administrator group membership.[30];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringThreat Group-3390 - Threat Group-3390 has used net user to conduct internal discovery of systems.[31];
+Bankshot - Bankshot gathers domain and account names/information through process monitoringTrickBot - TrickBot collects the users of the system.[32];
+
+T1098-Account Manipulation
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountLazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountAPT3 - APT3 has been known to add created accounts to local admin groups to maintain elevated access.[1];
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountCalisto - Calisto adds permissions and remote logins to all users.[2];
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountDragonfly 2.0 - Dragonfly 2.0 added newly created accounts to the administrators group to maintain elevated access.[3][4];
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountLazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s account.[5][6];
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountMimikatz - The Mimikatz credential dumper has been extended to include Skeleton Key domain controller authentication bypass functionality. The LSADUMP::ChangeNTLM and LSADUMP::SetNTLM modules can also manipulate the password hash of an account without knowing the clear text value.[7][8];
+Lazarus Group - Lazarus Group malware WhiskeyDelta-Two contains a function that attempts to rename the administrator’s accountSkeleton Key - Skeleton Key is used to patch an enterprise domain controller authentication process with a backdoor password. It allows adversaries to bypass the standard authentication system to use a defined password for all accounts authenticating to that domain controller.[9];
+
+T1182-AppCert DLLs
+
+T1103-AppInit DLLs
+
+T1155-AppleScript
+
+T1017-Application Deployment Software
+
+T1138-Application Shimming
+
+T1010-Application Window Discovery
+
+T1123-Audio Capture
+T9000 - T9000 uses the Skype API to record audio and video callsT9000 - T9000 uses the Skype API to record audio and video callsAPT37 - APT37 has used an audio capturing utility known as SOUNDWAVE that captures microphone input.[1];
+T9000 - T9000 uses the Skype API to record audio and video callsBandook - Bandook has modules that are capable of capturing audio.[2];
+T9000 - T9000 uses the Skype API to record audio and video callsDerusbi - Derusbi is capable of performing audio captures.[3];
+T9000 - T9000 uses the Skype API to record audio and video callsEvilGrab - EvilGrab has the capability to capture audio from a victim machine.[4];
+T9000 - T9000 uses the Skype API to record audio and video callsFlame - Flame can record audio using any existing hardware recording devices.[5][6];
+T9000 - T9000 uses the Skype API to record audio and video callsInvisiMole - InvisiMole can record sound using input audio devices.[7];
+T9000 - T9000 uses the Skype API to record audio and video callsJanicab - Janicab captured audio and sent it out to a C2 server.[8][9];
+T9000 - T9000 uses the Skype API to record audio and video callsMacSpy - MacSpy can record the sounds from microphones on a computer.[10];
+T9000 - T9000 uses the Skype API to record audio and video callsPowerSploit - PowerSploit's Get-MicrophoneAudio Exfiltration module can record system microphone audio.[11][12];
+T9000 - T9000 uses the Skype API to record audio and video callsPupy - Pupy can record sound with the microphone.[13];
+T9000 - T9000 uses the Skype API to record audio and video callsT9000 - T9000 uses the Skype API to record audio and video calls. It writes encrypted data to %APPDATA%\Intel\Skype.[14];
+T9000 - T9000 uses the Skype API to record audio and video callsVERMIN - VERMIN can perform audio capture.[15];
+
+T1131-Authentication Package
+
+T1119-Automated Collection
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsRTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsAPT28 - APT28 used a publicly available tool to gather and compress multiple documents on the DCCC and DNC networks.[1];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsBADNEWS - BADNEWS monitors USB devices and copies files with certain extensions toa predefined directory.[2];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsBankshot - Bankshot recursively generates a list of files within a directory and sends them back to the control server.[3];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsComnie - Comnie executes a batch script to store discovery information in %TEMP%\info.dat and then uploads the temporarily file to the remote C2 server.[4];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsFIN5 - FIN5 scans processes on all victim systems in the environment and uses automated scripts to pull back the results.[5];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsFIN6 - FIN6 has used a script to iterate through a list of compromised PoS systems, copy data to a log file, and remove the original data files.[6];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsHelminth - A Helminth VBScript receives a batch script to execute a set of commands in a command prompt.[7];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsInvisiMole - Each time a new drive is inserted, InvisiMole generates a list of all files on the drive and stores it in an encrypted file.[8];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsOilRig - OilRig has used automated collection.[9];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsPatchwork - Patchwork developed a file stealer to search C:\ and collect files with certain extensions. Patchwork also executed a script to enumerate all drives, store them as a list, and upload generated files to the C2 server.[2];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsProxysvc - Proxysvc automatically collects data about the victim and sends it to the control server.[10];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsRover - Rover automatically collects files from the local system and removable drives based on a predefined list of file extensions on a regular timeframe.[11];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsRTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of strings.[12];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsT9000 - T9000 searches removable storage devices for files with a pre-defined list of file extensions (e.g. * .doc, .ppt, .xls, .docx, .pptx, *.xlsx). Any matching files are encrypted and written to a local user directory.[13];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsThreat Group-3390 - Threat Group-3390 ran a command to compile an archive of file types of interest from the victim user's directories.[14];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsUSBStealer - For all non-removable drives on a victim, USBStealer executes automated collection of certain files for later exfiltration.[15];
+RTM - RTM monitors browsing activity and automatically captures screenshots if a victim browses to a URL matching one of a list of stringsVERMIN - VERMIN saves each collected file with the automatically generated format {0:dd-MM-yyyy}.txt .[16];
+
+T1020-Automated Exfiltration
+
+T1139-Bash History
+
+T1009-Binary Padding
+
+T1197-BITS Jobs
+
+T1067-Bootkit
+
+T1217-Browser Bookmark Discovery
+
+T1176-Browser Extensions
+
+T1110-Brute Force
+
+T1088-Bypass User Account Control
+
+T1042-Change Default File Association
+
+T1146-Clear Command History
+
+T1115-Clipboard Data
+
+T1191-CMSTP
+
+T1116-Code Signing
+
+T1059-Command-Line Interface
+Dragonfly 2.0 - Dragonfly 2Dragonfly 2.0 - Dragonfly 24H RAT - 4H RAT has the capability to create a remote shell.[2];
+Dragonfly 2.0 - Dragonfly 2adbupd - adbupd can run a copy of cmd.exe.[3];
+Dragonfly 2.0 - Dragonfly 2admin@338 - Following exploitation with LOWBALL malware, admin@338 actors created a file containing a list of commands to be executed on the compromised computer.[4];
+Dragonfly 2.0 - Dragonfly 2ADVSTORESHELL - ADVSTORESHELL can create a remote shell and run a given command.[5][6];
+Dragonfly 2.0 - Dragonfly 2APT1 - APT1 has used the Windows command shell to execute commands.[7];
+Dragonfly 2.0 - Dragonfly 2APT28 - APT28 uses cmd.exe to execute commands.[8];
+Dragonfly 2.0 - Dragonfly 2APT3 - An APT3 downloader uses the Windows command "cmd.exe" /C whoami. The group also uses a tool to execute commands on remote computers.[9][10];
+Dragonfly 2.0 - Dragonfly 2APT37 - APT37 has used the command-line interface.[11][12];
+Dragonfly 2.0 - Dragonfly 2BACKSPACE - Adversaries can direct BACKSPACE to execute from the command-line on infected hosts, or have BACKSPACE create a reverse shell.[13];
+Dragonfly 2.0 - Dragonfly 2BADNEWS - BADNEWS is capable of executing commands via cmd.exe.[14][15];
+Dragonfly 2.0 - Dragonfly 2Bandook - Bandook is capable of spawning a Windows command shell.[16];
+Dragonfly 2.0 - Dragonfly 2Bankshot - Bankshot uses the command-line interface to execute arbitrary commands.[17][18];
+Dragonfly 2.0 - Dragonfly 2Bisonal - Bisonal can launch cmd.exe to execute commands on the system.[19];
+Dragonfly 2.0 - Dragonfly 2BLACKCOFFEE - BLACKCOFFEE has the capability to create a reverse shell.[20];
+Dragonfly 2.0 - Dragonfly 2BRONZE BUTLER - BRONZE BUTLER uses the command-line interface.[21];
+Dragonfly 2.0 - Dragonfly 2CallMe - CallMe has the capability to create a reverse shell on victims.[22];
+Dragonfly 2.0 - Dragonfly 2Carbanak - Carbanak has a command to create a reverse shell.[23];
+Dragonfly 2.0 - Dragonfly 2Chaos - Chaos provides a reverse shell connection on 8338/TCP, encrypted via AES.[24];
+Dragonfly 2.0 - Dragonfly 2China Chopper - China Chopper is capable of opening a command terminal.[25];
+Dragonfly 2.0 - Dragonfly 2CHOPSTICK - CHOPSTICK is capable of performing remote command execution.[26][5];
+Dragonfly 2.0 - Dragonfly 2cmd - cmd is used to execute programs and other actions at the command-line interface.[27];
+Dragonfly 2.0 - Dragonfly 2Cobalt Strike - Cobalt Strike uses a command-line interface to interact with systems.[28];
+Dragonfly 2.0 - Dragonfly 2CozyCar - A module in CozyCar allows arbitrary commands to be executed by invoking C:\Windows\System32\cmd.exe.[29];
+Dragonfly 2.0 - Dragonfly 2Daserf - Daserf can execute shell commands.[30][21];
+Dragonfly 2.0 - Dragonfly 2Derusbi - Derusbi is capable of creating a remote Bash shell and executing commands.[31][32];
+Dragonfly 2.0 - Dragonfly 2Dipsind - Dipsind can spawn remote shells.[3];
+Dragonfly 2.0 - Dragonfly 2DownPaper - DownPaper uses the command line.[33];
+Dragonfly 2.0 - Dragonfly 2Dragonfly 2.0 - Dragonfly 2.0 used command line for execution.[34];
+Dragonfly 2.0 - Dragonfly 2Emissary - Emissary has the capability to create a remote shell and execute specified commands.[35];
+Dragonfly 2.0 - Dragonfly 2Felismus - Felismus uses command line for execution.[36];
+Dragonfly 2.0 - Dragonfly 2FELIXROOT - FELIXROOT opens a remote shell to execute commands on the infected system.[37];
+Dragonfly 2.0 - Dragonfly 2FIN7 - FIN7 used cmd.exe to launch commands on the victim’s machine.[38];
+Dragonfly 2.0 - Dragonfly 2FIN8 - FIN8 executes commands remotely via cmd.exe.[39];
+Dragonfly 2.0 - Dragonfly 2gh0st - gh0st RAT is able to open a command shell.[40];
+Dragonfly 2.0 - Dragonfly 2Gold Dragon - Gold Dragon uses cmd.exe to execute commands for discovery.[41];
+Dragonfly 2.0 - Dragonfly 2Gorgon Group - Gorgon Group malware can use cmd.exe to download and execute payloads and to execute commands on the system.[42];
+Dragonfly 2.0 - Dragonfly 2GravityRAT - GravityRAT executes commands remotely on the infected host.[43];
+Dragonfly 2.0 - Dragonfly 2H1N1 - H1N1 kills and disables services by using cmd.exe.[44];
+Dragonfly 2.0 - Dragonfly 2HARDRAIN - HARDRAIN uses cmd.exe to execute netshcommands.[45];
+Dragonfly 2.0 - Dragonfly 2hcdLoader - hcdLoader provides command-line access to the compromised system.[46];
+Dragonfly 2.0 - Dragonfly 2Helminth - Helminth can provide a remote shell.[47];
+Dragonfly 2.0 - Dragonfly 2Hi-Zor - Hi-Zor has the ability to create a reverse shell.[48];
+Dragonfly 2.0 - Dragonfly 2HOMEFRY - uses a command-line interface.[32];
+Dragonfly 2.0 - Dragonfly 2Honeybee - Several commands are supported by the Honeybee's implant via the command-line interface and there’s also a utility to execute any custom command on an infected endpoint.[49];
+Dragonfly 2.0 - Dragonfly 2HTTPBrowser - HTTPBrowser is capable of spawning a reverse shell on a victim.[50];
+Dragonfly 2.0 - Dragonfly 2httpclient - httpclient opens cmd.exe on the victim.[2];
+Dragonfly 2.0 - Dragonfly 2InnaputRAT - InnaputRAT launches a shell to execute commands on the victim’s machine.[51];
+Dragonfly 2.0 - Dragonfly 2InvisiMole - InvisiMole can launch a remote shell to execute commands.[52];
+Dragonfly 2.0 - Dragonfly 2JPIN - JPIN can use the command-line utility cacls.exe to change file permissions.[3];
+Dragonfly 2.0 - Dragonfly 2Kasidet - Kasidet can execute commands using cmd.exe.[53];
+Dragonfly 2.0 - Dragonfly 2Kazuar - Kazuar uses cmd.exe and /bin/bash to execute commands on the victim’s machine.[54];
+Dragonfly 2.0 - Dragonfly 2Ke3chang - Malware used by Ke3chang can run commands on the command-line interface.[55][56];
+Dragonfly 2.0 - Dragonfly 2KEYMARBLE - KEYMARBLE can execute shell commands using cmd.exe.[57];
+Dragonfly 2.0 - Dragonfly 2Koadic - Koadic can open an interactive command-shell to perform command line functions on victim machines.[58];
+Dragonfly 2.0 - Dragonfly 2KOMPROGO - KOMPROGO is capable of creating a reverse shell.[59];
+Dragonfly 2.0 - Dragonfly 2Lazarus Group - Lazarus Group malware uses cmd.exe to execute commands on victims.[60][61][62][63];
+Dragonfly 2.0 - Dragonfly 2Leviathan - Leviathan uses a backdoor known as BADFLICK that is is capable of generating a reverse shell.[32];
+Dragonfly 2.0 - Dragonfly 2Linfo - Linfo creates a backdoor through which remote attackers can start a remote shell.[64];
+Dragonfly 2.0 - Dragonfly 2Magic Hound - Magic Hound has used the command-line interface.[65];
+Dragonfly 2.0 - Dragonfly 2Matroyshka - Matroyshka is capable of providing Meterpreter shell access.[66];
+Dragonfly 2.0 - Dragonfly 2menuPass - menuPass executes commands using a command-line interface and reverse shell. The group has used a modified version of pentesting script wmiexec.vbs to execute commands.[67][68][69];
+Dragonfly 2.0 - Dragonfly 2MirageFox - MirageFox has the capability to execute commands using cmd.exe.[70];
+Dragonfly 2.0 - Dragonfly 2Mis-Type - Mis-Type uses cmd.exe to run commands for enumerating the host.[71];
+Dragonfly 2.0 - Dragonfly 2Misdat - Misdat is capable of providing shell functionality to the attacker to execute commands.[71];
+Dragonfly 2.0 - Dragonfly 2Mivast - Mivast has the capability to open a remote shell and run basic commands.[72];
+Dragonfly 2.0 - Dragonfly 2MoonWind - MoonWind can execute commands via an interactive command shell.[73];
+Dragonfly 2.0 - Dragonfly 2Mosquito - Mosquito executes cmd.exe and uses a pipe to read the results and send back the output to the C2 server.[74];
+Dragonfly 2.0 - Dragonfly 2MURKYTOP - uses the command-line interface.[32];
+Dragonfly 2.0 - Dragonfly 2NavRAT - NavRAT leverages cmd.exe to perform discovery techniques.[75];
+Dragonfly 2.0 - Dragonfly 2NETEAGLE - NETEAGLE allows adversaries to execute shell commands on the infected host.[13];
+Dragonfly 2.0 - Dragonfly 2OilRig - OilRig has used the command-line interface for execution.[76][77][78][79];
+Dragonfly 2.0 - Dragonfly 2OopsIE - OopsIE uses the command prompt to execute commands on the victim's machine.[77][80];
+Dragonfly 2.0 - Dragonfly 2Orz - Orz can execute shell commands.[81];
+Dragonfly 2.0 - Dragonfly 2Patchwork - Patchwork ran a reverse shell with Meterpreter.[82];
+Dragonfly 2.0 - Dragonfly 2PHOREAL - PHOREAL is capable of creating reverse shell.[59];
+Dragonfly 2.0 - Dragonfly 2Pisloader - Pisloader uses cmd.exe to set the Registry Run key value. It also has a command to spawn a command shell.[83];
+Dragonfly 2.0 - Dragonfly 2PLAINTEE - PLAINTEE uses cmd.exe to execute commands on the victim’s machine.[84];
+Dragonfly 2.0 - Dragonfly 2PlugX - PlugX allows actors to spawn a reverse shell on a victim.[50];
+Dragonfly 2.0 - Dragonfly 2PoisonIvy - PoisonIvy creates a backdoor through which remote attackers can open a command-line interface.[85];
+Dragonfly 2.0 - Dragonfly 2PowerDuke - PowerDuke runs cmd.exe /c and sends the output to its C2.[86];
+Dragonfly 2.0 - Dragonfly 2POWRUNER - POWRUNER can execute commands from its C2 server.[76];
+Dragonfly 2.0 - Dragonfly 2Proxysvc - Proxysvc executes a binary on the system and logs the results into a temp file by using: cmd.exe /c " > %temp%\PM* .tmp 2>&1".[87];
+Dragonfly 2.0 - Dragonfly 2Pteranodon - Pteranodon can execute commands on the victim.[88];
+Dragonfly 2.0 - Dragonfly 2QUADAGENT - QUADAGENT uses cmd.exe to execute scripts and commands on the victim’s machine.[89];
+Dragonfly 2.0 - Dragonfly 2QuasarRAT - QuasarRAT can launch a remote shell to execute commands on the victim’s machine.[90];
+Dragonfly 2.0 - Dragonfly 2Rancor - Rancor has used cmd.exe to execute commmands.[84];
+Dragonfly 2.0 - Dragonfly 2RATANKBA - RATANKBA uses cmd.exe to execute commands.[91][92];
+Dragonfly 2.0 - Dragonfly 2RedLeaves - RedLeaves can receive and execute commands with cmd.exe. It can also provide a reverse shell.[68][93];
+Dragonfly 2.0 - Dragonfly 2RGDoor - RGDoor uses cmd.exe to execute commands on the victim’s machine.[94];
+Dragonfly 2.0 - Dragonfly 2RogueRobin - RogueRobin uses a command prompt to run a PowerShell script from Excel.[95];
+Dragonfly 2.0 - Dragonfly 2RTM - RTM uses the command line and rundll32.exe to execute.[96];
+Dragonfly 2.0 - Dragonfly 2Sakula - Sakula calls cmd.exe to run various DLL files via rundll32 and also to perform file cleanup. Sakula also has the capability to invoke a reverse shell.[97];
+Dragonfly 2.0 - Dragonfly 2SeaDuke - SeaDuke is capable of executing commands.[98];
+Dragonfly 2.0 - Dragonfly 2SEASHARPEE - SEASHARPEE can execute commands on victims.[79];
+Dragonfly 2.0 - Dragonfly 2SNUGRIDE - SNUGRIDE is capable of executing commands and spawning a reverse shell.[93];
+Dragonfly 2.0 - Dragonfly 2Sowbug - Sowbug has used command line during its intrusions.[99];
+Dragonfly 2.0 - Dragonfly 2StreamEx - StreamEx has the ability to remotely execute commands.[100];
+Dragonfly 2.0 - Dragonfly 2Suckfly - Several tools used by Suckfly have been command-line driven.[101];
+Dragonfly 2.0 - Dragonfly 2TDTESS - TDTESS provides a reverse shell on the victim.[66];
+Dragonfly 2.0 - Dragonfly 2TEXTMATE - TEXTMATE executes cmd.exe to provide a reverse shell to adversaries.[102][103];
+Dragonfly 2.0 - Dragonfly 2Threat Group-1314 - Threat Group-1314 actors spawned shells on remote systems on a victim network to execute commands.[104];
+Dragonfly 2.0 - Dragonfly 2Threat Group-3390 - Threat Group-3390 has used command-line interfaces for execution.[25];
+Dragonfly 2.0 - Dragonfly 2TinyZBot - TinyZBot supports execution from the command-line.[105];
+Dragonfly 2.0 - Dragonfly 2TURNEDUP - TURNEDUP is capable of creating a reverse shell.[106];
+Dragonfly 2.0 - Dragonfly 2TYPEFRAME - TYPEFRAME can execute commands using a shell.[107];
+Dragonfly 2.0 - Dragonfly 2Umbreon - Umbreon provides access using both standard facilities like SSH and additional access using its backdoor Espeon, providing a reverse shell upon receipt of a special packet[108];
+Dragonfly 2.0 - Dragonfly 2UPPERCUT - UPPERCUT uses cmd.exe to execute commands on the victim’s machine.[109];
+Dragonfly 2.0 - Dragonfly 2Volgmer - Volgmer can execute commands on the victim's machine.[110][111];
+Dragonfly 2.0 - Dragonfly 2Wiarp - Wiarp creates a backdoor through which remote attackers can open a command line interface.[112];
+Dragonfly 2.0 - Dragonfly 2WINERACK - WINERACK can create a reverse shell that utilizes statically-linked Wine cmd.exe code to emulate Windows command prompt commands.[11];
+Dragonfly 2.0 - Dragonfly 2XTunnel - XTunnel has been used to execute remote commands.[26];
+Dragonfly 2.0 - Dragonfly 2ZLib - ZLib has the ability to execute shell commands.[71];
+
+T1043-Commonly Used Port
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080ADVSTORESHELL - A variant of ADVSTORESHELL attempts communication to the C2 server over HTTP on port 443.[1];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080APT19 - APT19 used TCP port 80 for C2.[2];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080APT3 - APT3 uses commonly used ports (like HTTPS/443) for command and control.[3];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080APT37 - APT37 has used port 8080 for C2.[4];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080BADCALL - BADCALL uses port 8000 and 443 for C2.[5];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080BBSRAT - BBSRAT uses HTTP TCP port 80 and HTTPS TCP port 443 for communications.[6];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Bisonal - Bisonal uses 443 for C2 communications.[7];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Briba - Briba connects to external C2 infrastructure over port 443.[8];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Calisto - Calisto attempted to contact the C2 server over TCP using port 80.[9];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Carbanak - Carbanak uses Port Numbers 443 and 80 for the C2 server.[10];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Cobalt Strike - Cobalt Strike uses a custom command and control protocol that communicates over commonly used ports. The C2 protocol is encapsulated in common application layer protocols.[11];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Comnie - Comnie uses Port Numbers 80, 8080, 8000, and 443 for communication to the C2 servers.[12];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Derusbi - Derusbi beacons to destination port 443.[13];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Dragonfly 2.0 - Dragonfly 2.0 used SMB over ports 445 or 139 for C2. The group also established encrypted connections over port 443.[14][15];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Duqu - Duqu uses a custom command and control protocol that communicates over commonly used ports, and is frequently encapsulated by application layer protocols.[16];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080ELMER - ELMER uses HTTP over port 443 for command and control.[17];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080EvilGrab - EvilGrab uses port 8080 for C2.[18];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080FELIXROOT - FELIXROOT uses port 443 for C2 communications.[19];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080FIN7 - FIN7 has used ports 53, 80, 443, and 8080 for C2.[20];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080FIN8 - FIN8 has tunneled RDP backdoors over port 443.[21];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080FTP - FTP operates over ports 21 and 20.[22];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080HARDRAIN - HARDRAIN binds and listens on port 443.[23];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Hi-Zor - Hi-Zor communicates with its C2 server over port 443.[24];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080HTTPBrowser - One HTTPBrowser variant connected to its C2 server over port 8080.[25];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080InvisiMole - InvisiMole uses port 80 for C2.[26];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080KEYMARBLE - KEYMARBLE uses port 443 for C2.[27];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Lazarus Group - Some Lazarus Group malware uses a list of ordered port numbers to choose a port for C2 traffic, which includes commonly used ports such as 443, 53, 80, 25, and 8080.[28][29];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080LOWBALL - LOWBALL command and control occurs via HTTPS over port 443.[30];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080.[31];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080MirageFox - MirageFox uses port 80 for C2.[32];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Mis-Type - Mis-Type communicates over common ports such as TCP 80, 443, and 25.[33];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Misdat - Misdat network traffic communicates over common ports like 80, 443, or 1433.[33];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Mivast - Mivast communicates over port 80 for C2.[34];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080MoonWind - MoonWind communicates over ports 80, 443, 53, and 8080 via raw sockets instead of the protocols usually associated with the ports.[35];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Naid - Naid connects to external C2 infrastructure over port 443.[36];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Nidiran - Nidiran communicates with its C2 domain over ports 443 and 8443.[37];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Pasam - Pasam connects to external C2 infrastructure and opens a backdoor over port 443.[38];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080PlugX - PlugX has beaconed to its C2 over port 443.[18];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080PowerDuke - PowerDuke connects over 443 for C2.[39];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080POWERSTATS - POWERSTATS has used port 80 for C2.[40];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Proxysvc - Proxysvc uses port 443 for the control server communications.[41];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080RATANKBA - RATANKBA uses port 443 for C2.[42];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080RedLeaves - RedLeaves uses a specific port of 443 and can also use ports 53 and 80 for C2. One RedLeaves variant uses HTTP over port 443 to connect to its C2 server.[18][43];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080RIPTIDE - RIPTIDE is a RAT that communicates with HTTP.[44];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080S-Type - S-Type uses ports 80, 443, and 8080 for C2.[33];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Shamoon - Shamoon has used TCP port 8080 for C2.[45];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Threat Group-3390 - C2 traffic for most Threat Group-3390 tools occurs over Port Numbers 53, 80, and 443.[46];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080TrickBot - TrickBot uses port 443 for C2 communications.[47][48];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080TYPEFRAME - TYPEFRAME variants can use ports 443, 8443, and 8080 for communications.[49];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Volgmer - Some Volgmer variants use ports 8080 and 8000 for C2.[50][51][52];
+Magic Hound - Magic Hound malware has communicated with C2 servers over port 6667 (for IRC) and port 8080Wiarp - Wiarp connects to external C2 infrastructure over the HTTP port.[53];
+
+T1092-Communication Through Removable Media
+
+T1223-Compiled HTML File
+
+T1109-Component Firmware
+
+T1122-Component Object Model Hijacking
+
+T1090-Connection Proxy
+
+T1196-Control Panel Items
+
+T1136-Create Account
+
+T1003-Credential Dumping
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneAPT1 - APT1 has been known to use credential dumping.[17];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneAPT28 - APT28 regularly deploys both publicly available and custom password retrieval tools on victims.[18][19];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneAPT3 - APT3 has used a tool to dump credentials by injecting itself into lsass.exe and triggering with the argument "dig." The group has also used a tools to dump passwords from browsers.[20];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneAPT37 - APT37 has used a credential stealer known as ZUMKONG that can harvest usernames and passwords stored in browsers.[21];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneAxiom - Axiom has been known to dump credentials.[22];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneBackdoor.Oldrea - Some Backdoor.Oldrea samples contain a publicly available Web browser password recovery tool.[23];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneBRONZE BUTLER - BRONZE BUTLER has used various tools to perform credential dumping.[24];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCachedump - Cachedump can extract cached password hashes from a system’s registry.[17];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCarbanak - Carbanak obtains Windows logon password details.[25];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneChChes - ChChes steals credentials stored inside Internet Explorer.[26];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCleaver - Cleaver has been known to dump credentials.[27];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCobalt Strike - Cobalt Strike can recover hashed passwords.[28];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCosmicDuke - CosmicDuke collects user credentials, including passwords, for various programs and browsers, including popular instant messaging applications, Web browsers, and email clients. Windows account hashes, domain accounts, and LSA secrets are also collected, as are WLAN keys.[29];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCozyCar - Password stealer and NTLM stealer modules in CozyCar harvest stored credentials from the victim, including credentials used as part of Windows NTLM user authentication. CozyCar has also executed Mimikatz for further victim penetration.[30];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneCrimson - Crimson contains a module to steal credentials from Web browsers on the victim machine.[31];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneDaserf - Daserf leverages Mimikatz and Windows Credential Editor to steal credentials.[32];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneDragonfly 2.0 - Dragonfly 2.0 dropped and executed SecretsDump and CrackMapExec, tools that can dump password hashes.[33][34][35];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneFgdump - Fgdump can dump Windows password hashes.[17];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneFIN5 - FIN5 has dumped credentials from victims. Specifically, the group has used the tool GET5 Penetrator to look for remote login and hard-coded credentials.[36][37];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneFIN6 - FIN6 has used Windows Credential Editor for credential dumping, as well as Metasploit’s PsExec NTDSGRAB module to obtain a copy of the victim's Active Directory database.[38];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneFIN8 - FIN8 harvests credentials using Invoke-Mimikatz or Windows Credentials Editor (WCE).[39];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and Lazagnegsecdump - gsecdump can dump Windows password hashes and LSA secrets.[40];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneH1N1 - H1N1 dumps usernames and passwords from Firefox, Internet Explorer, and Outlook.[41];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneHOMEFRY - can perform credential dumping.[42];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneKe3chang - Ke3chang has dumped credentials, including by using Mimikatz.[43][44];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneKoadic - Koadic can gather hashed passwords by dumping SAM/SECURITY hive and gathers domain controller hashes from NTDS.[45];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneLazarus Group - Lazarus Group leveraged Mimikatz to extract Windows Credentials of currently logged-in users and steals passwords stored in browsers.[46];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneLeafminer - Leafminer leveraged the tool LaZagne for retrieving login and password information.[47];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneLslsass - Lslsass can dump active logon session password hashes from the lsass process.[17];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMagic Hound - Magic Hound stole domain credentials from Microsoft Active Directory Domain Controller and leveraged Mimikatz.[48];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMatroyshka - Matroyshka is capable of stealing Outlook passwords.[49][50];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnemenuPass - menuPass has used a modified version of pentesting tools wmiexec.vbs and secretsdump.py to dump credentials.[26][51];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMimikatz - Mimikatz performs credential dumping to obtain account and password information useful in gaining access to additional systems and enterprise network resources. It contains functionality to acquire information about credentials in many ways, including from the LSA, SAM table, credential vault, DCSync/NetSync, and DPAPI.[52][15][53];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMimiPenguin - MimiPenguin can dump process memory and extract clear-text credentials.[54];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMivast - Mivast has the capability to gather NTLM password information.[55];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMolerats - Molerats used the public tool BrowserPasswordDump10 to dump passwords saved in browsers on victims.[56];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneMuddyWater - MuddyWater has performed credential dumping with Mimikatz and Lazagne.[57];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneNet Crawler - Net Crawler uses credential dumpers such as Mimikatz and Windows Credential Editor to extract cached credentials from Windows systems.[27];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneOilRig - OilRig has used credential dumping tools such as Mimikatz and Lazagne to steal credentials to accounts logged into the compromised system and to Outlook Web Access.[58][59];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneOLDBAIT - OLDBAIT collects credentials from Internet Explorer, Mozilla Firefox, Eudora, and several email clients.[60];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneOnionDuke - OnionDuke steals credentials from its victims.[29];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePatchwork - Patchwork dumped the login data database from \AppData\Local\Google\Chrome\User Data\Default\Login Data.[61];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePinchDuke - PinchDuke steals credentials from compromised hosts. PinchDuke's credential stealing functionality is believed to be based on the source code of the Pinch credential stealing malware (also known as LdPinch). Credentials targeted by PinchDuke include ones associated with The Bat!, Yahoo!, Mail.ru, Passport.Net, Google Talk, Netscape Navigator, Mozilla Firefox, Mozilla Thunderbird, Internet Explorer, Microsoft Outlook, WinInet Credential Cache, and Lightweight Directory Access Protocol (LDAP).[29];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePLATINUM - PLATINUM has used keyloggers that are also capable of dumping credentials.[62];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePoseidon Group - Poseidon Group conducts credential dumping on victims, with a focus on obtaining credentials belonging to domain and database servers.[63];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePowerSploit - PowerSploit contains a collection of Exfiltration modules that can harvest credentials from Group Policy Preferences, Windows vault credential objects, or using Mimikatz.[64][65];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePrikormka - A module in Prikormka collects passwords stored in applications installed on the victim.[66];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagnePupy - Pupy executes Mimikatz using PowerShell and can also perform pass-the-ticket and use Lazagne for harvesting credentials.[67];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and Lazagnepwdump - pwdump can be used to dump credentials.[68];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneQuasarRAT - QuasarRAT can obtain passwords from common browsers and FTP clients.[69][70];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneRedLeaves - RedLeaves can gather browser usernames and passwords.[71];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneRemsec - Remsec can dump the SAM database.[72];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneROKRAT - ROKRAT steals credentials stored in Web browsers by querying the sqlite database and leveraging the Windows Vault mechanism.[73];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneSowbug - Sowbug has used credential dumping tools.[74];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneStealth Falcon - Stealth Falcon malware gathers passwords from multiple sources, including Windows Credential Vault, Internet Explorer, Firefox, Chrome, and Outlook.[75];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneStrider - Strider has registered its persistence module on domain controllers as a Windows LSA (Local System Authority) password filter to dump credentials any time a domain, local user, or administrator logs in or changes a password.[76];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneSuckfly - Suckfly used a signed credential-dumping tool to obtain victim account credentials.[77];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneThreat Group-3390 - Threat Group-3390 actors have used gsecdump and a modified version of Mimikatz called Wrapikatz to dump credentials. They have also dumped credentials from domain controllers.[78][79];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneTrojan.Karagany - Trojan.Karagany can dump passwords and save them into \ProgramData\Mail\MailAg\pwds.txt.[23];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneUnknown Logger - Unknown Logger is capable of stealing usernames and passwords from browsers on the victim machine.[80];
+MuddyWater - MuddyWater has performed credential dumping with Mimikatz and LazagneWindows Credential Editor - Windows Credential Editor can dump credentials.[81];
+
+T1081-Credentials in Files
+
+T1214-Credentials in Registry
+
+T1094-Custom Command and Control Protocol
+
+T1024-Custom Cryptographic Protocol
+
+T1002-Data Compressed
+
+T1132-Data Encoding
+
+T1022-Data Encrypted
+
+T1213-Data from Information Repositories
+
+T1005-Data from Local System
+
+T1039-Data from Network Shared Drive
+
+T1025-Data from Removable Media
+
+T1001-Data Obfuscation
+
+T1074-Data Staged
+
+T1030-Data Transfer Size Limits
+
+T1207-DCShadow
+
+T1140-Deobfuscate/Decode Files or Information
+
+T1089-Disabling Security Tools
+
+T1175-Distributed Component Object Model
+
+T1038-DLL Search Order Hijacking
+
+T1073-DLL Side-Loading
+
+T1172-Domain Fronting
+
+T1189-Drive-by Compromise
+
+T1157-Dylib Hijacking
+
+T1173-Dynamic Data Exchange
+
+T1114-Email Collection
+
+T1106-Execution through API
+
+T1129-Execution through Module Load
+
+T1048-Exfiltration Over Alternative Protocol
+
+T1041-Exfiltration Over Command and Control Channel
+
+T1011-Exfiltration Over Other Network Medium
+
+T1052-Exfiltration Over Physical Medium
+
+T1190-Exploit Public-Facing Application
+
+T1203-Exploitation for Client Execution
+
+T1212-Exploitation for Credential Access
+
+T1211-Exploitation for Defense Evasion
+
+T1068-Exploitation for Privilege Escalation
+
+T1210-Exploitation of Remote Services
+
+T1133-External Remote Services
+
+T1181-Extra Window Memory Injection
+
+T1008-Fallback Channels
+
+T1083-File and Directory Discovery
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRover - Rover automatically searches for files on local drives based on a predefined list of file extensions3PARA RAT - 3PARA RAT has a command to retrieve metadata for files on disk as well as a command to list the current working directory.[2];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensions4H RAT - 4H RAT has the capability to obtain file and directory listings.[2];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsadmin@338 - admin@338 actors used the following commands after exploiting a machine with LOWBALL malware to obtain information about files and directories: dir c:\ >> %temp%\download dir "c:\Documents and Settings" >> %temp%\download dir "c:\Program Files\" >> %temp%\download dir d:\ >> %temp%\download[3];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsADVSTORESHELL - ADVSTORESHELL can list files and directories.[4][5];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsAPT28 - APT28 has used Forfiles to locate PDF, Excel, and Word documents during. The group also searched a compromised DCCC computer for specific terms.[6][7];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsAPT3 - APT3 has a tool that looks for files and directories on the local file system.[8][9];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsAutoIt backdoor - AutoIt backdoor is capable of identifying documents on the victim with the following extensions: .doc; .pdf, .csv, .ppt, .docx, .pst, .xls, .xlsx, .pptx, and .jpeg.[10];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBackdoor.Oldrea - Backdoor.Oldrea collects information about available drives, default browser, desktop file list, My Documents, Internet history, program files, and root of available drives. It also searches for ICS-related software files.[11];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBACKSPACE - BACKSPACE allows adversaries to search for files.[12];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBADNEWS - BADNEWS identifies files with certain extensions from USB devices, then copies them to a predefined directory.[13];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBankshot - Bankshot searches for files on the victim's machine.[14];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBBSRAT - BBSRAT can list file and directory information.[15];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBLACKCOFFEE - BLACKCOFFEE has the capability to enumerate files.[16];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBlackEnergy - BlackEnergy gathers a list of installed apps from the uninstall program Registry. It also gathers registered mail, browser, and instant messaging clients from the Registry. BlackEnergy has searched for given file types.[17][18];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBrave Prince - Brave Prince gathers file and directory information from the victim’s machine.[19];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsBRONZE BUTLER - BRONZE BUTLER has collected a list of files from the victim and uploaded it to its C2 server, and then created a new list of specific files to steal.[20];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsChChes - ChChes collects the victim's %TEMP% directory path and version of Internet Explorer.[21];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsChina Chopper - China Chopper can list directory contents.[22];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsCHOPSTICK - An older version of CHOPSTICK has a module that monitors all mounted volumes for files with the extensions .doc, .docx, .pgp, .gpg, .m2f, or .m2o.[4];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionscmd - cmd can be used to find files and directories with native functionality such as dir commands.[23];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsCORALDECK - CORALDECK searches for specified files.[24];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsCosmicDuke - CosmicDuke searches attached and mounted drives for file extensions and keywords that match a predefined list.[25];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsCrimson - Crimson contains commands to list files and directories, as well as search for files matching certain extensions from a defined list.[26];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsCrossRAT - CrossRAT can list all files on a system.;
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDark Caracal - Dark Caracal collected file listings of all default Windows directories.[27];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDDKONG - DDKONG lists files on the victim’s machine.[28];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDerusbi - Derusbi is capable of obtaining directory, file, and drive listings.[29][22];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDragonfly 2.0 - Dragonfly 2.0 used a batch script to gather folder and file names from victim hosts.[30];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDust Storm - Dust Storm has used Android backdoors capable of enumerating specific files on the infected devices.[31];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsDustySky - DustySky scans the victim for files that contain certain keywords from a list that is obtained from the C2 as a text file. It also collects information about installed software.[32];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsElise - A variant of Elise executes dir C:\progra~1 when initially run.[33];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsELMER - ELMER is capable of performing directory listings.[34];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsFALLCHILL - FALLCHILL can search files on a victim.[35];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsFinFisher - FinFisher enumerates directories and scans for certain files.[36][37];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsFLASHFLOOD - FLASHFLOOD searches for interesting files (either a default or customized set of file extensions) on the local system and removable media.[12];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsForfiles - Forfiles can be used to locate certain types of files/directories in a system.(ex: locate all files with a specific extension, name, and/or age)[6];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsFruitFly - FruitFly looks for specific files and file types.[38];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsGeminiDuke - GeminiDuke collects information from the victim, including installed drivers, programs previously executed by users, programs and services configured to automatically run at startup, files and folders present in any user's home folder, files and folders present in any user's My Documents, programs installed to the Program Files folder, and recently accessed files, folders, and programs.[39];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsGold Dragon - Gold Dragon lists the directories for Desktop, program files, and the user’s recently accessed files.[19];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsGravityRAT - GravityRAT collects the volumes mapped on the system, and also steals files with the following extensions: .docx, .doc, .pptx, .ppt, .xlsx, .xls, .rtf, and .pdf.[40];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsHoneybee - Honeybee's service-based DLL implant traverses the FTP server’s directories looking for files with keyword matches for computer names or certain keywords.[41];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsHTTPBrowser - HTTPBrowser is capable of listing files, folders, and drives on a victim.[42][43];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsHydraq - Hydraq creates a backdoor through which remote attackers can check for the existence of files, including its own components, as well as retrieve a list of logical drives.[44][45];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsInnaputRAT - InnaputRAT enumerates directories and obtains file attributes on a system.[46];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsInvisiMole - InvisiMole can lists information about files in a directory.[47];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsJPIN - JPIN can enumerate drives and their types. It can also change file permissions using cacls.exe.[48];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsKasidet - Kasidet has the ability to search for a given filename on a victim.[49];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsKazuar - Kazuar finds a specified directory, lists the files and metadata about those files.[50];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsKe3chang - Ke3chang uses command-line interaction to search files and directories.[51];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsKEYMARBLE - KEYMARBLE has a command to search for files on the victim’s machine.[52];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsKwampirs - Kwampirs collects a list of files and directories in C:\ with the command dir /s /a c:\ >> "C:\windows\TEMP[RANDOM].tmp".[53];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsLazarus Group - Several Lazarus Group malware samples use a common function to identify target files by their extension. Lazarus Group malware families can also enumerate files and directories, including a Destover-like variant that lists files and gathers information for all drives.[54][55];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsLeafminer - Leafminer used a tool called MailSniper to search for files on the desktop and another utility called Sobolsoft to extract attachments from EML files.[56];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsLinfo - Linfo creates a backdoor through which remote attackers can list contents of drives and search for files.[57];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsMagic Hound - Magic Hound malware can list a victim's logical drives and the type, as well the total/free space of the fixed devices. Other malware can list a directory's contents.[58];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsMisdat - Misdat is capable of running commands to obtain a list of files and directories, as well as enumerating logical drives.[31];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsMobileOrder - MobileOrder has a command to upload to its C2 server information about files on the victim mobile device, including SD card size, installed app list, SMS content, contacts, and calling history.[59];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsMoonWind - MoonWind has a command to return a directory listing for a specified directory.[60];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsNDiskMonitor - NDiskMonitor can obtain a list of all files and directories as well as logical drives.[13];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsNETEAGLE - NETEAGLE allows adversaries to enumerate and modify the infected host's file system. It supports searching for directories, creating directories, listing directory contents, reading and writing to files, retrieving file attributes, and retrieving volume information.[12];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsOrz - Orz can gather victim drive information.[61];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsOwaAuth - OwaAuth has a command to list its directory and logical drives.[42];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPasam - Pasam creates a backdoor through which remote attackers can retrieve lists of files.[62];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPatchwork - A Patchwork payload has searched all fixed drives on the victim for files matching a specified list of extensions.[63][13];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPinchDuke - PinchDuke searches for files created within a certain timeframe and whose file extension matches a predefined list.[39];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPisloader - Pisloader has commands to list drives on the victim machine and to list file information for a given directory.[64];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPOORAIM - POORAIM can conduct file browsing.[24];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPowerDuke - PowerDuke has commands to get the current directory name as well as the size of a file. It also has commands to obtain information about logical drives, drive type, and free space.[65];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPOWRUNER - POWRUNER may enumerate user directories on a victim.[66];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPrikormka - A module in Prikormka collects information about the paths, size, and creation time of files with specific file extensions, but not the actual content of the file.[67];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsProxysvc - Proxysvc lists files in directories.[55];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPsylo - Psylo has commands to enumerate all storage devices and to find all files that start with a particular string.[59];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPteranodon - Pteranodon identifies files matching certain file extension and copies them to subdirectories it created.[68];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsPupy - Pupy can walk through directories and recursively search for strings in files.[69];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRARSTONE - RARSTONE obtains installer properties from Uninstall Registry Key entries to obtain information about installed applications and how to uninstall certain applications.[70];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRedLeaves - RedLeaves can enumerate and search for files and directories.[71][21];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRemsec - Remsec is capable of listing contents of folders on the victim. Remsec also searches for custom network encryption software on victims.[72][73][74];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRover - Rover automatically searches for files on local drives based on a predefined list of file extensions.[75];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsRTM - RTM can scan victim drives to look for specific banking software on the machine to determine next actions. It also looks at browsing history and open tabs for specific strings.[76];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsShamoon - Shamoon attempts to access the ADMIN$, C$\Windows, D$\Windows, and E$\Windows shares on the victim with its current privileges.[77];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSHOTPUT - SHOTPUT has a command to obtain a directory listing.[78];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSmoke Loader - Smoke Loader recursively searches through directories for files.[79];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSOUNDBITE - SOUNDBITE is capable of enumerating and manipulating files and directories.[80];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSowbug - Sowbug identified and extracted all Word documents on a server by using a command containing * .doc and *.docx. The actors also searched for documents based on a specific date range and attempted to identify all installed software on a victim.[81];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSPACESHIP - SPACESHIP identifies files and directories for collection by searching for specific file extensions or file modification time.[12];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsStreamEx - StreamEx has the ability to enumerate drive types.[82];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsSynAck - SynAck checks its directory location in an attempt to avoid launching in a sandbox.[83][84];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsTINYTYPHON - TINYTYPHON searches through the drive containing the OS, then all drive letters C through to Z, for documents matching certain extensions.[10];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsTrickBot - TrickBot searches the system for all of the following file extensions: .avi, .mov, .mkv, .mpeg, .mpeg4, .mp4, .mp3, .wav, .ogg, .jpeg, .jpg, .png, .bmp, .gif, .tiff, .ico, .xlsx, and .zip[85];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsTurla - Turla surveys a system upon check-in to discover files in specific locations on the hard disk %TEMP% directory, the current user's desktop, and in the Program Files directory.[86];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsTYPEFRAME - TYPEFRAME can search directories for files on the victim’s machine.[87];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsUPPERCUT - UPPERCUT has the capability to gather the victim's current directory.[88];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsUSBStealer - USBStealer searches victim drives for files matching certain extensions (".skr",".pkr" or ".key") or names.[89][90];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsVolgmer - Volgmer can list directories on a victim.[91];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsWINERACK - WINERACK can enumerate files and directories.[24];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsWinMM - WinMM sets a WH_CBT Windows hook to search for and capture files on the victim.[92];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsXAgentOSX - XAgentOSX contains the readFiles function to return a detailed listing (sometimes recursive) of a specified directory.[93];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsyty - yty gathers information on victim’s drives and has a plugin for document listing.[94];
+Rover - Rover automatically searches for files on local drives based on a predefined list of file extensionsZLib - ZLib has the ability to enumerate files and drives.[31];
+
+T1107-File Deletion
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimUSBStealer - USBStealer has several commands to delete files associated with the malware from the victimADVSTORESHELL - ADVSTORESHELL can delete files and directories.[2];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimAPT18 - APT18 actors deleted tools and batch files from victim systems.[3];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimAPT28 - APT28 has intentionally deleted computer files to cover their tracks, including with use of the program CCleaner.[4];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimAPT3 - APT3 has a tool that can delete files.[5];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimAPT37 - APT37 has access to destructive malware that is capable of overwriting a machine's Master Boot Record (MBR).[6][7];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBackdoor.Oldrea - Backdoor.Oldrea contains a cleanup module that removes traces of itself from the victim.[8];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBankshot - Bankshot marks files to be deleted upon the next system reboot and uninstalls and removes itself from the system.[9];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBBSRAT - BBSRAT can delete files and directories.[10];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBisonal - Bisonal deletes its dropper and VBS scripts from the victim’s machine.[11];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBLACKCOFFEE - BLACKCOFFEE has the capability to delete files.[12];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBlackEnergy - BlackEnergy 2 contains a "Destroy" plug-in that destroys data stored on victim hard drives by overwriting file contents.[13];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimBRONZE BUTLER - The BRONZE BUTLER uploader or malware the uploader uses command to delete the RAR archives after they have been exfiltrated.[14];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimCalisto - Calisto has the capability to use rm -rf to remove folders and files from the victim's machine.[15];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimCarbanak - Carbanak has a command to delete files.[16];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimCherry Picker - Recent versions of Cherry Picker delete files and registry keys created by the malware.[17];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimcmd - cmd can be used to delete files from the file system.[18];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimCobalt Group - Cobalt Group deleted the DLL dropper from the victim’s machine to cover their tracks.[19];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimDerusbi - Derusbi is capable of deleting files. It has been observed loading a Linux Kernel Module (LKM) and then deleting it from the hard disk as well as overwriting the data with null bytes.[20][21];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimDragonfly 2.0 - Dragonfly 2.0 deleted many of its files used during operations as part of cleanup, including removing applications and deleting screenshots.[22][23];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFALLCHILL - FALLCHILL can delete malware and associated artifacts from the victim.[24];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFELIXROOT - FELIXROOT deletes the .LNK file from the startup directory as well as the dropper components.[25];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFIN10 - FIN10 has used batch scripts and scheduled tasks to delete critical system files.[26];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFIN5 - FIN5 uses SDelete to clean up the environment and attempt to prevent detection.[27];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFIN8 - FIN8 has deleted tmp and prefetch files during post compromise cleanup activities.[28];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimFruitFly - FruitFly will delete files on the system.[29];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimGazer - Gazer has commands to delete files and persistence mechanisms from the victim.[30][31];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimgh0st - gh0st RAT is able to delete files.[32];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimGold Dragon - Gold Dragon deletes one of its files, 2.hwp, from the endpoint after establishing persistence.[33];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimGroup5 - Malware used by Group5 is capable of remotely deleting files from victims.[34];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimH1N1 - H1N1 deletes shadow copies from the victim.[35];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimHALFBAKED - HALFBAKED can delete a specified file.[36];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimHi-Zor - Hi-Zor deletes its RAT installer file as it executes its DLL payload file.[37];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimHoneybee - Honeybee removes batch files to reduce fingerprint on the system as well as deletes the CAB file that gets encoded upon infection.[38];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimHTTPBrowser - HTTPBrowser deletes its original installer file once installation is complete.[39];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimHydraq - Hydraq creates a backdoor through which remote attackers can delete files.[40][41];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimInnaputRAT - InnaputRAT has a command to delete files.[42];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimInvisiMole - InvisiMole has a command to delete a file and deletes files after they have been successfully uploaded to C2 servers.[43];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimJHUHUGIT - The JHUHUGIT dropper can delete itself from the victim. Another JHUHUGIT variant has the capability to delete specified files.[44][45];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimJPIN - JPIN's installer/uninstaller component deletes itself if it encounters a version of Windows earlier than Windows XP or identifies security-related processes running.[46];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimjRAT - jRAT has a function to delete files from the victim’s machine.[47];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimKazuar - Kazuar can delete files and optionally overwrite with random data beforehand.[48];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimKEYMARBLE - KEYMARBLE has the capability to delete files off the victim’s machine.[49];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimKomplex - The Komplex trojan supports file deletion.[50];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimLazarus Group - Lazarus Group malware deletes files in various ways, including "suicide scripts" to delete malware binaries from the victim. Lazarus Group also uses secure file deletion to delete files from the victim. Additionally, Lazarus Group malware SHARPKNOT overwrites and deletes the Master Boot Record (MBR) on the victim's machine.[51][52][53];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimLinfo - Linfo creates a backdoor through which remote attackers can delete files.[54];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMacSpy - MacSpy deletes any temporary files it creates[55];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMagic Hound - Magic Hound has deleted and overwrote files to cover tracks.[56][57];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimmenuPass - A menuPass macro deletes files after it has decoded and decompressed them.[58];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMisdat - Misdat is capable of deleting the backdoor file.[59];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMoonWind - MoonWind can delete itself or specified files.[60];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMore_eggs - More_eggs can remove itself from a system.[19];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMosquito - Mosquito deletes files using DeleteFileW API call.[61];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimMURKYTOP - has the capability to delete local files.[21];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimNanHaiShu - NanHaiShu launches a script to delete their original decoy file to cover tracks.[62];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimOilRig - OilRig has deleted files associated with their payload after execution.[63][64];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimOopsIE - OopsIE has the capability to delete files and scripts from the victim's machine.[65];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPasam - Pasam creates a backdoor through which remote attackers can delete files.[66];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPatchwork - Patchwork removed certain files and replaced them so they could not be retrieved.[67];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimpngdowner - pngdowner deletes content from C2 communications that was saved to the user's temporary directory.[68];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPowerDuke - PowerDuke has a command to write random data across a file and delete it.[69];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPOWERSTATS - POWERSTATS can wipe drives using PowerShell Remove-Item commands.[70];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimProton - Proton removes all files in the /tmp directory.[29];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimProxysvc - Proxysvc can wipe files indicated by the attacker and remove itself from disk using a batch file.[52];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPteranodon - Pteranodon can delete files that may interfere with it executing. It also can delete temporary files and itself after the initial script executes.[71];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimPUNCHBUGGY - PUNCHBUGGY can delete files written to disk.[28];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimQUADAGENT - QUADAGENT has a command to delete its Registry key and scheduled task.[72];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimReaver - Reaver deletes the original dropped file from the victim.[73];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimRedLeaves - RedLeaves can delete specified files.[74];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimRemsec - Remsec is capable of deleting files on the victim. It also securely removes itself after collecting and exfiltrating data.[75][76][77];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimRTM - RTM can delete all files created during its execution.[78];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimRunningRAT - RunningRAT contains code to delete files from the victim’s machine.[33];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimSakula - Some Sakula samples use cmd.exe to delete temporary files.[79];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimSDelete - SDelete deletes data in a way that makes it unrecoverable.[80];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimSeaDuke - SeaDuke can securely delete files, including deleting itself from the victim.[81];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimShamoon - Shamoon attempts to overwrite operating system files with image files.[82][83];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimTDTESS - TDTESS creates then deletes log files during installation of itself as a service.[84];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimThreat Group-3390 - Threat Group-3390 has deleted existing logs and exfiltrated file archives from a victim.[85];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimTYPEFRAME - TYPEFRAME can delete files off the system.[86];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimUSBStealer - USBStealer has several commands to delete files associated with the malware from the victim.[87];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimVERMIN - VERMIN can delete files on the victim’s machine.[88];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimVolgmer - Volgmer can delete files and itself after infection to avoid analysis.[89];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimWINDSHIELD - WINDSHIELD is capable of file deletion along with other file system interaction.[90];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimWingbird - Wingbird deletes its payload along with the payload's parent process after it finishes copying files.[91];
+USBStealer - USBStealer has several commands to delete files associated with the malware from the victimXAgentOSX - XAgentOSX contains the deletFileFromPath function to delete a specified file using the NSFileManager:removeFileAtPath method.[92];
+
+T1222-File Permissions Modification
+
+T1006-File System Logical Offsets
+
+T1044-File System Permissions Weakness
+
+T1187-Forced Authentication
+
+T1144-Gatekeeper Bypass
+
+T1061-Graphical User Interface
+
+T1200-Hardware Additions
+
+T1158-Hidden Files and Directories
+
+T1147-Hidden Users
+
+T1143-Hidden Window
+
+T1148-HISTCONTROL
+
+T1179-Hooking
+
+T1062-Hypervisor
+
+T1183-Image File Execution Options Injection
+
+T1054-Indicator Blocking
+
+T1066-Indicator Removal from Tools
+
+T1070-Indicator Removal on Host
+
+T1202-Indirect Command Execution
+
+T1056-Input Capture
+
+T1141-Input Prompt
+
+T1130-Install Root Certificate
+
+T1118-InstallUtil
+
+T1208-Kerberoasting
+
+T1215-Kernel Modules and Extensions
+
+T1142-Keychain
+
+T1159-Launch Agent
+
+T1160-Launch Daemon
+
+T1152-Launchctl
+
+T1161-LC_LOAD_DYLIB Addition
+
+T1149-LC_MAIN Hijacking
+
+T1171-LLMNR/NBT-NS Poisoning
+
+T1168-Local Job Scheduling
+
+T1162-Login Item
+
+T1037-Logon Scripts
+
+T1177-LSASS Driver
+
+T1185-Man in the Browser
+
+T1036-Masquerading
+
+T1031-Modify Existing Service
+
+T1112-Modify Registry
+
+T1170-Mshta
+
+T1188-Multi-hop Proxy
+
+T1104-Multi-Stage Channels
+
+T1026-Multiband Communication
+
+T1079-Multilayer Encryption
+
+T1128-Netsh Helper DLL
+
+T1046-Network Service Scanning
+
+T1126-Network Share Connection Removal
+
+T1135-Network Share Discovery
+
+T1040-Network Sniffing
+
+T1050-New Service
+
+T1096-NTFS File Attributes
+
+T1027-Obfuscated Files or Information
+
+T1137-Office Application Startup
+
+T1075-Pass the Hash
+
+T1097-Pass the Ticket
+
+T1174-Password Filter DLL
+
+T1201-Password Policy Discovery
+
+T1034-Path Interception
+
+T1120-Peripheral Device Discovery
+
+T1069-Permission Groups Discovery
+
+T1150-Plist Modification
+
+T1205-Port Knocking
+
+T1013-Port Monitors
+
+T1086-PowerShell
+
+T1145-Private Keys
+
+T1057-Process Discovery
+
+T1186-Process Doppelgänging
+
+T1093-Process Hollowing
+
+T1055-Process Injection
+
+T1012-Query Registry
+
+T1163-Rc.common
+
+T1164-Re-opened Applications
+
+T1108-Redundant Access
+
+T1060-Registry Run Keys / Startup Folder
+
+T1121-Regsvcs/Regasm
+
+T1117-Regsvr32
+
+T1219-Remote Access Tools
+
+T1076-Remote Desktop Protocol
+
+T1105-Remote File Copy
+
+T1021-Remote Services
+
+T1018-Remote System Discovery
+
+T1091-Replication Through Removable Media
+
+T1014-Rootkit
+
+T1085-Rundll32
+
+T1053-Scheduled Task
+
+T1029-Scheduled Transfer
+
+T1113-Screen Capture
+
+T1180-Screensaver
+
+T1064-Scripting
+
+T1063-Security Software Discovery
+
+T1101-Security Support Provider
+
+T1167-Securityd Memory
+
+T1035-Service Execution
+
+T1058-Service Registry Permissions Weakness
+
+T1166-Setuid and Setgid
+
+T1051-Shared Webroot
+
+T1023-Shortcut Modification
+
+T1178-SID-History Injection
+
+T1218-Signed Binary Proxy Execution
+
+T1216-Signed Script Proxy Execution
+
+T1198-SIP and Trust Provider Hijacking
+
+T1045-Software Packing
+
+T1153-Source
+
+T1151-Space after Filename
+
+T1193-Spearphishing Attachment
+
+T1192-Spearphishing Link
+
+T1194-Spearphishing via Service
+
+T1184-SSH Hijacking
+
+T1071-Standard Application Layer Protocol
+
+T1032-Standard Cryptographic Protocol
+
+T1095-Standard Non-Application Layer Protocol
+
+T1165-Startup Items
+
+T1169-Sudo
+
+T1206-Sudo Caching
+
+T1195-Supply Chain Compromise
+
+T1019-System Firmware
+
+T1082-System Information Discovery
+
+T1016-System Network Configuration Discovery
+
+T1049-System Network Connections Discovery
+
+T1033-System Owner/User Discovery
+
+T1007-System Service Discovery
+
+T1124-System Time Discovery
+
+T1080-Taint Shared Content
+
+T1221-Template Injection
+
+T1072-Third-party Software
+
+T1209-Time Providers
+
+T1099-Timestomp
+
+T1154-Trap
+
+T1127-Trusted Developer Utilities
+
+T1199-Trusted Relationship
+
+T1111-Two-Factor Authentication Interception
+
+T1065-Uncommonly Used Port
+
+T1204-User Execution
+
+T1078-Valid Accounts
+
+T1125-Video Capture
+
+T1102-Web Service
+
+T1100-Web Shell
+
+T1077-Windows Admin Shares
+
+T1047-Windows Management Instrumentation
+
+T1084-Windows Management Instrumentation Event Subscription
+
+T1028-Windows Remote Management
+
+T1004-Winlogon Helper DLL
+
+T1220-XSL Script Processing
+
